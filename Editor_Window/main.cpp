@@ -4,6 +4,10 @@
 #include "framework.h"
 #include "Editor_Window.h"
 
+#include "..\\GameEngine_SOURCE\\geApplication.h"
+
+Application app;
+
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
@@ -25,6 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
+    app.test();
     // TODO: 여기에 코드를 입력합니다.
 
     // 전역 문자열을 초기화합니다.
