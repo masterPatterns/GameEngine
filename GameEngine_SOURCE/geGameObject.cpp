@@ -5,66 +5,39 @@ namespace ge
 	GameObject::GameObject()
 		: mX(0.0f)
 		, mY(0.0f)
-		, mX2(0.0f)
-		, mY2(0.0f)
-		, mGubun(0)
 	{
 	}
 	GameObject::~GameObject()
 	{
 	}
 
-	void GameObject::Initialize(int gubun)
+	void GameObject::Initialize()
 	{
-		mGubun = gubun;
+		
 	}
 
 	void GameObject::Update()
 	{
-		if(mGubun == 1)
+		const int speed = 200.0f;
+
+		if (Input::GetKey(eKeyCode::Left))
 		{
-			if (Input::GetKey(eKeyCode::Left))
-			{
-				mX -= 0.01f;
-			}
-
-			if (Input::GetKey(eKeyCode::Right))
-			{
-				mX += 0.01f;
-			}
-
-			if (Input::GetKey(eKeyCode::Up))
-			{
-				mY -= 0.01f;
-			}
-
-			if (Input::GetKey(eKeyCode::Down))
-			{
-				mY += 0.01f;
-			}
+			mX -= speed * Time::DeltaTime();
 		}
-		
-		if (mGubun == 2)
+
+		if (Input::GetKey(eKeyCode::Right))
 		{
-			if (Input::GetKey(eKeyCode::A))
-			{
-				mX2 -= 0.01f;
-			}
+			mX += speed * Time::DeltaTime();
+		}
 
-			if (Input::GetKey(eKeyCode::D))
-			{
-				mX2 += 0.01f;
-			}
+		if (Input::GetKey(eKeyCode::Up))
+		{
+			mY -= speed * Time::DeltaTime();
+		}
 
-			if (Input::GetKey(eKeyCode::W))
-			{
-				mY2 -= 0.01f;
-			}
-
-			if (Input::GetKey(eKeyCode::S) )
-			{
-				mY2 += 0.01f;
-			}
+		if (Input::GetKey(eKeyCode::Down))
+		{
+			mY += speed * Time::DeltaTime();
 		}
 	}
 	void GameObject::LateUpdate()
@@ -72,37 +45,19 @@ namespace ge
 	}
 	void GameObject::Render(HDC hdc)
 	{
-		if (mGubun == 1)
-		{
-			HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
-			HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBrush);
 
-			HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-			HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
-			SelectObject(hdc, oldPen);
+		HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
+		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBrush);
 
-			Rectangle(hdc, 100 + mX, 100 + mY, 200 + mX, 200 + mY);
+		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
+		HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
+		SelectObject(hdc, oldPen);
 
-			SelectObject(hdc, oldBrush);
-			DeleteObject(blueBrush);
-			DeleteObject(redPen);
-		}
-		
-		if (mGubun == 2)
-		{
-			HBRUSH redBrush = CreateSolidBrush(RGB(255, 0, 0));
-			HBRUSH oldBrush2 = (HBRUSH)SelectObject(hdc, redBrush);
+		Rectangle(hdc, 100 + mX, 100 + mY, 200 + mX, 200 + mY);
 
-			HPEN bluePen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-			HPEN oldPen2 = (HPEN)SelectObject(hdc, bluePen);
-			SelectObject(hdc, oldPen2);
-
-			Ellipse(hdc, 2000 + mX2, 700 + mY2, 2100 + mX2, 800 + mY2);
-
-			SelectObject(hdc, oldBrush2);
-			DeleteObject(redBrush);
-			DeleteObject(bluePen);
-		}
+		SelectObject(hdc, oldBrush);
+		DeleteObject(blueBrush);
+		DeleteObject(redPen);
 	}
 
 }

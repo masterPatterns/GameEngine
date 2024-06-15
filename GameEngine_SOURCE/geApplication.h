@@ -1,7 +1,9 @@
 #pragma once
 #include "CommonInclude.h"
 #include "geGameObject.h"
+#include "geGameObject2.h"
 #include "geInput.h"
+#include "geTime.h"
 
 namespace ge
 {
@@ -11,7 +13,7 @@ namespace ge
 		Application();
 		~Application();
 
-		void Initialize(HWND hwnd);
+		void Initialize(HWND hwnd, UINT width, UINT height, int nCmdShow);
 		void Run();
 
 		void Update();
@@ -22,9 +24,14 @@ namespace ge
 		HWND mHwnd;
 		HDC mHdc;
 
-		float mSpeed;
+		HDC mBackHdc;
+		HBITMAP mBackBitmap;
+
+
+		UINT mWidth;
+		UINT mHight;
 
 		GameObject mPlayer;
-		GameObject mPlayer2;
+		GameObject2 mPlayer2;
 	};
 }
