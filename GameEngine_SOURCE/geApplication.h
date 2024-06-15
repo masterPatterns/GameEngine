@@ -21,6 +21,13 @@ namespace ge
 		void Render();
 
 	private:
+		void clearRenderTarget();
+		void copyRenderTarget(HDC source, HDC dest);
+		void adjustWindowRect(HWND hwnd, UINT width, UINT height, int nCmdShow);
+		void createBuffer(UINT width, UINT height);
+		void initializeEtc();
+
+	private:
 		HWND mHwnd;
 		HDC mHdc;
 
@@ -31,7 +38,9 @@ namespace ge
 		UINT mWidth;
 		UINT mHight;
 
-		GameObject mPlayer;
-		GameObject2 mPlayer2;
+		std::vector<GameObject*> mGameObjects;
+
+		/*GameObject mPlayer;
+		GameObject2 mPlayer2;*/
 	};
 }

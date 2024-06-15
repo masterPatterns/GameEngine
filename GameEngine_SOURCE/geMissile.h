@@ -2,17 +2,16 @@
 #include "CommonInclude.h"
 #include "geInput.h"
 #include "geTime.h"
-#include "geMissile.h"
 
 namespace ge
 {
-	class GameObject
+	class Missile
 	{
 	public:
-		GameObject();
-		~GameObject();
+		Missile();
+		~Missile();
 
-		void Initialize();
+		void Initialize(float mSize);
 
 		void Update();
 		void LateUpdate();
@@ -29,12 +28,6 @@ namespace ge
 	private:
 		float mX;
 		float mY;
-		float left;
-		float top;
-		float right;
-		float bottom;
-
-		Missile mMissile[100];
-		int isShoot[100];
+		float size;
 	};
 }

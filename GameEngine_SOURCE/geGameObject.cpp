@@ -5,6 +5,10 @@ namespace ge
 	GameObject::GameObject()
 		: mX(0.0f)
 		, mY(0.0f)
+		, left(0.0f)
+		, top(0.0f)
+		, right(0.0f)
+		, bottom(0.0f)
 	{
 	}
 	GameObject::~GameObject()
@@ -13,7 +17,16 @@ namespace ge
 
 	void GameObject::Initialize()
 	{
-		
+		left = 100;
+		top = 100;
+		right = 200;
+		bottom = 200;
+		for (size_t i = 0; i < 100; i++)
+		{
+			mMissile[i].Initialize(20);
+			mMissile[i].SetPosition(left, top);
+			isShoot[i] = 0;
+		}
 	}
 
 	void GameObject::Update()
@@ -39,13 +52,24 @@ namespace ge
 		{
 			mY += speed * Time::DeltaTime();
 		}
+
+		if (isShoot[0] == 0) {
+			mMissile[0].SetPosition(left + mX, top + mY);
+		}
+		else {
+			mMissile[0].Update();
+		}
+
+		if (Input::GetKey(eKeyCode::Space))
+		{
+			isShoot[0] = 1;
+		}
 	}
 	void GameObject::LateUpdate()
 	{
 	}
 	void GameObject::Render(HDC hdc)
 	{
-
 		HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
 		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBrush);
 
@@ -53,11 +77,15 @@ namespace ge
 		HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
 		SelectObject(hdc, oldPen);
 
-		Rectangle(hdc, 100 + mX, 100 + mY, 200 + mX, 200 + mY);
+		Rectangle(hdc, left + mX, top + mY, right + mX, bottom + mY);
 
 		SelectObject(hdc, oldBrush);
 		DeleteObject(blueBrush);
 		DeleteObject(redPen);
+
+		if (isShoot[0] == 1) {
+			mMissile[0].Render(hdc);
+		}
 	}
 
 }
