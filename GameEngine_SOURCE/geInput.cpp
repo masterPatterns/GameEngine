@@ -14,6 +14,16 @@ namespace ge
 
 	void Input::Initailize()
 	{
+		CreateKeys();
+	}
+
+	void Input::Update()
+	{
+		UpdateKeys();
+	}
+
+	void Input::CreateKeys()
+	{
 		for (size_t i = 0; i < (UINT)eKeyCode::End; i++)
 		{
 			Key key = {};
@@ -25,47 +35,49 @@ namespace ge
 		}
 	}
 
-	void Input::Update()
+	void Input::UpdateKeys()
 	{
-		for (size_t i = 0; i < mKeys.size(); i++)
-		{
-			// 키가 눌렸다
-			if (GetAsyncKeyState(ASCII[i]) & 0x8000)
+		std::for_each(mKeys.begin(), mKeys.end(),
+			[](Key& key) -> void
 			{
-				if (mKeys[i].bPressed == true) 
-				{
-					mKeys[i].state = eKeyState::Pressed;
-				}
-				else
-				{
-					mKeys[i].state = eKeyState::Down;
-				}
-				mKeys[i].bPressed = true;
-			}
-			else // 키가 안눌렸다
-			{
-				if (mKeys[i].bPressed == true)
-				{
-					mKeys[i].state = eKeyState::Up;
-				}
-				else
-				{
-					mKeys[i].state = eKeyState::None;
-				}
-				mKeys[i].bPressed = false;
-			}
+				UpdateKey(key);
+			});
+	}
+
+	void Input::UpdateKey(Input::Key& key)
+	{
+		if (IsKeyDown(key.keyCode)) {
+			UpdateKeyDown(key);
+		}
+		else {
+			UpdateKeyUp(key);
 		}
 	}
 
-	/*void Input::GetKeyDown(eKeyCode code)
+	bool Input::IsKeyDown(eKeyCode code)
 	{
+		return GetAsyncKeyState(ASCII[(UINT)code]) & 0x8000;
 	}
 
-	void Input::GetKeyUp(eKeyCode code)
+	void Input::UpdateKeyDown(Input::Key& key)
 	{
+		if (key.bPressed == true) {
+			key.state = eKeyState::Pressed;
+		}
+		else {
+			key.state = eKeyState::Down;
+		}
+		key.bPressed = true;
 	}
 
-	void Input::GetKey(eKeyCode code)
+	void Input::UpdateKeyUp(Input::Key& key)
 	{
-	}*/
+		if (key.bPressed == true) {
+			key.state = eKeyState::Up;
+		}
+		else {
+			key.state = eKeyState::None;
+		}
+		key.bPressed = false;
+	}
 }
