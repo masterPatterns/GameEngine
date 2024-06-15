@@ -5,7 +5,6 @@ namespace ge
 	Application::Application() 
 		: mHwnd(nullptr)
 		, mHdc(nullptr)
-		, mSpeed(0.0f)
 	{
 		
 	}
@@ -24,6 +23,8 @@ namespace ge
 
 		mPlayer.SetPosition(0, 0);
 		mPlayer2.SetPosition(0, 0);
+
+		Input::Initailize();
 	}
 
 	void Application::Run()
@@ -35,7 +36,7 @@ namespace ge
 
 	void Application::Update()
 	{
-		mSpeed += 0.01f;
+		Input::Update();
 
 		mPlayer.Update();
 		mPlayer2.Update();

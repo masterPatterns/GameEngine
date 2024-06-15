@@ -1,5 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
+#include "geInput.h"
 
 namespace ge
 {

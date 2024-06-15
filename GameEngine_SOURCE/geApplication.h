@@ -1,6 +1,7 @@
 #pragma once
 #include "CommonInclude.h"
 #include "geGameObject.h"
+#include "geInput.h"
 
 namespace ge
 {
