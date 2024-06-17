@@ -21,7 +21,7 @@ namespace ge
 
 	void GameObject2::Update()
 	{
-		const int speed = 150.0f;
+		const float speed = 150.0f;
 		if (mGubun == 1)
 		{
 			if (Input::GetKey(eKeyCode::Left))

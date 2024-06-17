@@ -19,7 +19,7 @@ namespace ge
 
 	void Missile::Update()
 	{
-		const int speed = 200.0f;
+		const float speed = 200.0f;
 
 		mY -= speed * Time::DeltaTime();
 	}

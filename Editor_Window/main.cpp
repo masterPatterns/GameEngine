@@ -6,6 +6,8 @@
 
 #include "..\\GameEngine_SOURCE\\geApplication.h"
 
+#include "..\\GameEngine_Window\\geLoadScenes.h"
+
 ge::Application application;
 
 #define MAX_LOADSTRING 100
@@ -112,8 +114,6 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, width, height, nullptr, nullptr, hInstance, nullptr);
 
-   application.Initialize(hWnd, width, height, nCmdShow);
-
    if (!hWnd)
    {
       return FALSE;
@@ -121,6 +121,11 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   application.Initialize(hWnd, width, height, nCmdShow);
+
+   //load Scenes
+   ge::LoadScenes();
 
    return TRUE;
 }

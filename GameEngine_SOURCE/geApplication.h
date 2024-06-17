@@ -4,6 +4,7 @@
 #include "geGameObject2.h"
 #include "geInput.h"
 #include "geTime.h"
+#include "geSceneManager.h"
 
 namespace ge
 {
@@ -38,7 +39,7 @@ namespace ge
 		UINT mWidth;
 		UINT mHight;
 
-		std::vector<GameObject*> mGameObjects;
+		//std::vector<GameObject*> mGameObjects;
 
 		/*GameObject mPlayer;
 		GameObject2 mPlayer2;*/

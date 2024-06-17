@@ -22,6 +22,8 @@ namespace ge
 		adjustWindowRect(hwnd, width, height, nCmdShow);
 		createBuffer(width, height);
 		initializeEtc();
+
+		SceneManager::Initialize();
 	}
 
 	void Application::Run()
@@ -36,12 +38,15 @@ namespace ge
 		Input::Update();
 		Time::Update();
 
-		for (size_t i = 0; i < 100; i++)
-		{
-			mGameObjects[i]->Update();
-		}
 		/*mPlayer.Update();
 		mPlayer2.Update();*/
+
+		/*for (size_t i = 0; i < 100; i++)
+		{
+			mGameObjects[i]->Update();
+		}*/
+
+		SceneManager::Update();
 	}
 
 	void Application::LateUpdate()
@@ -53,12 +58,15 @@ namespace ge
 	{
 		clearRenderTarget();
 
-		for (size_t i = 0; i < 100; i++)
-		{
-			mGameObjects[i]->Render(mBackHdc);
-		}
 		/*mPlayer.Render(mBackHdc);
 		mPlayer2.Render(mBackHdc);*/
+
+		/*for (size_t i = 0; i < 100; i++)
+		{
+			mGameObjects[i]->Render(mBackHdc);
+		}*/
+
+		SceneManager::Render(mBackHdc);
 
 		Time::Render(mBackHdc);
 
@@ -103,19 +111,20 @@ namespace ge
 	
 	void Application::initializeEtc()
 	{
-		for (size_t i = 0; i < 100; i++)
-		{
-			GameObject* gameObj = new GameObject();
-			gameObj->Initialize();
-			gameObj->SetPosition(rand() % 1600, rand() % 900);
-			mGameObjects.push_back(gameObj);
-		}
 
 		/*mPlayer.Initialize();
 		mPlayer2.Initialize(2);*/
 
 		/*mPlayer.SetPosition(0.0f, 0.0f);
 		mPlayer2.SetPosition(0.0f, 0.0f, 0.0f, 0.0f);*/
+
+		/*for (size_t i = 0; i < 100; i++)
+		{
+			GameObject* gameObj = new GameObject();
+			gameObj->Initialize();
+			gameObj->SetPosition(rand() % 1600, rand() % 900);
+			mGameObjects.push_back(gameObj);
+		}*/
 
 		Input::Initailize();
 		Time::Initailize();

@@ -13,7 +13,6 @@ namespace ge
 		~GameObject();
 
 		void Initialize();
-
 		void Update();
 		void LateUpdate();
 		void Render(HDC hdc);
@@ -34,7 +33,7 @@ namespace ge
 		float right;
 		float bottom;
 
-		Missile mMissile[100];
-		int isShoot[100];
+		Missile mMissile[10];
+		int isShoot[10];
 	};
 }

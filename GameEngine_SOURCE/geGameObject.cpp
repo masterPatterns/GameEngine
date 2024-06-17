@@ -10,6 +10,7 @@ namespace ge
 		, right(0.0f)
 		, bottom(0.0f)
 	{
+		Initialize();
 	}
 	GameObject::~GameObject()
 	{
@@ -21,7 +22,7 @@ namespace ge
 		top = 100;
 		right = 200;
 		bottom = 200;
-		for (size_t i = 0; i < 100; i++)
+		for (size_t i = 0; i < 10; i++)
 		{
 			mMissile[i].Initialize(20);
 			mMissile[i].SetPosition(left, top);
