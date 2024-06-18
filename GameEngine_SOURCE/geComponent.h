@@ -19,14 +19,7 @@ namespace ge
 		GameObject* GetOwner() const { return mOwner; }
 		void SetOwner(GameObject* owner) { mOwner = owner; }
 
-		void setLSize(float mLSize) { lSize = mLSize; }
-		void setRSize(float mRSize) { rSize = mRSize; }
-		float getLSize() { return lSize; }
-		float getRSize() { return rSize; }
-
 	private:
-		float lSize;
-		float rSize;
 		GameObject* mOwner;
 	};
 }

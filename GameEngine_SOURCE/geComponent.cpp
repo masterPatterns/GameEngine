@@ -3,11 +3,7 @@
 namespace ge
 {
 	Component::Component()
-		: lSize(0.0f)
-		, rSize(0.0f)
 	{
-		setLSize(100.0f);
-		setRSize(100.0f);
 	}
 	Component::~Component()
 	{
@@ -16,8 +12,7 @@ namespace ge
 
 	void Component::Initialize(float mLSize, float mRSize)
 	{
-		setLSize(mLSize);
-		setRSize(mRSize);
+
 	}
 	void Component::Update()
 	{

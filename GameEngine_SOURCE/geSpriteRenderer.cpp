@@ -13,8 +13,7 @@ namespace ge
 	}
 	void SpriteRenderer::Initialize(float mLSize, float mRSize)
 	{
-		setLSize(mLSize);
-		setRSize(mRSize);
+
 	}
 	void SpriteRenderer::Update()
 	{

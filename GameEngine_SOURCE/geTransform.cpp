@@ -3,8 +3,7 @@
 namespace ge
 {
 	Transform::Transform()
-		/*: mX(0)
-		, mY(0)*/
+		: mPosition(0, 0)
 	{
 	}
 	Transform::~Transform()
@@ -12,32 +11,31 @@ namespace ge
 	}
 	void Transform::Initialize(float mLSize, float mRSize)
 	{
-		setLSize(mLSize);
-		setRSize(mRSize);
+
 	}
 	void Transform::Update()
 	{
-		//const int speed = 200.0f;
+		const int speed = 200.0f;
 
-		/*if (Input::GetKey(eKeyCode::Left))
+		if (Input::GetKey(eKeyCode::Left))
 		{
-			mX -= speed * Time::DeltaTime();
+			mPosition.x -= speed * Time::DeltaTime();
 		}
 
 		if (Input::GetKey(eKeyCode::Right))
 		{
-			mX += speed * Time::DeltaTime();
+			mPosition.x += speed * Time::DeltaTime();
 		}
 
 		if (Input::GetKey(eKeyCode::Up))
 		{
-			mY -= speed * Time::DeltaTime();
+			mPosition.y -= speed * Time::DeltaTime();
 		}
 
 		if (Input::GetKey(eKeyCode::Down))
 		{
-			mY += speed * Time::DeltaTime();
-		}*/
+			mPosition.y += speed * Time::DeltaTime();
+		}
 	}
 	void Transform::LateUpdate()
 	{
