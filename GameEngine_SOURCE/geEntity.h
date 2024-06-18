@@ -1,5 +1,6 @@
 #pragma once
 #include "CommonInclude.h"
+using namespace ge::math;
 
 namespace ge
 {

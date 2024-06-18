@@ -9,9 +9,15 @@
     <ClInclude Include="geLoadScenes.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="gePlayScene.h" />
+    <ClInclude Include="gePlayScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="gePlayer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="gePlayScene.cpp" />
+    <ClCompile Include="gePlayScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="gePlayer.cpp" />
   </ItemGroup>
 </Project>

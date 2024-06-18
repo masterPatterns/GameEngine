@@ -16,8 +16,8 @@ namespace ge
 		virtual void LateUpdate();
 		virtual void Render(HDC hdc);
 
-		void SetOwner(GameObject* owner) { mOwner = owner; }
 		GameObject* GetOwner() const { return mOwner; }
+		void SetOwner(GameObject* owner) { mOwner = owner; }
 
 		void setLSize(float mLSize) { lSize = mLSize; }
 		void setRSize(float mRSize) { rSize = mRSize; }

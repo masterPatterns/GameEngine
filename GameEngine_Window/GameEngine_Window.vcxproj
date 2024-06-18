@@ -130,9 +130,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="geLoadScenes.h" />
+    <ClInclude Include="gePlayer.h" />
     <ClInclude Include="gePlayScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="gePlayer.cpp" />
     <ClCompile Include="gePlayScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

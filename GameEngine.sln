@@ -9,6 +9,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngine_Window", "GameEn
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngine_SOURCE", "GameEngine_SOURCE\GameEngine_SOURCE.vcxitems", "{15580F66-B6B4-4A95-A417-538D5BF859D5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{E9412ED0-D15B-46CE-9E08-BD07B3A32C03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{3815EA62-4794-43BA-8C98-0C013E441F08}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\CloudOcean.png = Resources\CloudOcean.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

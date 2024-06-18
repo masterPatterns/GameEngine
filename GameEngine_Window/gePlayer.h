@@ -1,22 +1,14 @@
 #pragma once
-#include "..\\GameEngine_SOURCE\\geScene.h"
 #include "..\\GameEngine_SOURCE\\geGameObject.h"
-#include "gePlayer.h"
 
 namespace ge
 {
-	class PlayScene : public Scene
+	class Player : public GameObject
 	{
 	public:
-		PlayScene();
-		~PlayScene();
-
 		void Initialize() override;
 		void Update() override;
 		void LateUpdate() override;
 		void Render(HDC hdc) override;
-
-	private:
-
 	};
 }

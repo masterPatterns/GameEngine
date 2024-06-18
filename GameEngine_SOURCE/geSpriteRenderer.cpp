@@ -3,6 +3,9 @@
 namespace ge
 {
 	SpriteRenderer::SpriteRenderer()
+		: mImage(nullptr)
+		, mWidth(0)
+		, mHeight(0)
 	{
 	}
 	SpriteRenderer::~SpriteRenderer()
@@ -29,7 +32,12 @@ namespace ge
 		SelectObject(hdc, oldPen);
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
-		Rectangle(hdc, tr->GetX(), tr->GetY(), getLSize() + tr->GetX(), getRSize() + tr->GetY());
+		Vector2 pos = tr->GetPosition();
+
+		Gdiplus::Graphics graphcis(hdc);
+		graphcis.DrawImage(mImage, Gdiplus::Rect(pos.x, pos.y, mWidth, mHeight));
+
+		//Rectangle(hdc, tr->GetX(), tr->GetY(), getLSize() + tr->GetX(), getRSize() + tr->GetY());
 
 		SelectObject(hdc, oldBrush);
 		DeleteObject(blueBrush);
@@ -38,5 +46,12 @@ namespace ge
 		/*if (isShoot[0] == 1) {
 			mMissile[0].Render(hdc);
 		}*/
+	}
+
+	void SpriteRenderer::ImageLoad(const std::wstring& path)
+	{
+		mImage = Gdiplus::Image::FromFile(path.c_str());
+		mWidth = mImage->GetWidth();
+		mHeight = mImage->GetHeight();
 	}
 }

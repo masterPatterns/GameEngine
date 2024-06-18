@@ -34,6 +34,7 @@ namespace ge
 		static void LateUpdate();
 		static void Render(HDC hdc);
 
+
 	private:
 		//static std::vector<Scene*> mScene;
 		static std::map<std::wstring, Scene*> mScene;

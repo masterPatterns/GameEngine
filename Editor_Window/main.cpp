@@ -10,6 +10,9 @@
 
 ge::Application application;
 
+ULONG_PTR gpToken;
+Gdiplus::GdiplusStartupInput gpsi;
+
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
@@ -63,6 +66,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
     }
 
+    Gdiplus::GdiplusShutdown(gpToken);
+
     return (int) msg.wParam;
 }
 
@@ -114,6 +119,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, width, height, nullptr, nullptr, hInstance, nullptr);
 
+   application.Initialize(hWnd, width, height, nCmdShow);
+
    if (!hWnd)
    {
       return FALSE;
@@ -122,7 +129,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
 
-   application.Initialize(hWnd, width, height, nCmdShow);
+   Gdiplus::GdiplusStartup(&gpToken, &gpsi, NULL);
 
    //load Scenes
    ge::LoadScenes();
