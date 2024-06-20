@@ -28,9 +28,16 @@ namespace ge
 	void PlayScene::LateUpdate()
 	{
 		Scene::LateUpdate();
+
+		if (Input::GetKeyDown(eKeyCode::N))
+		{
+			SceneManager::LoadScene(L"EndScene");
+		}
 	}
 	void PlayScene::Render(HDC hdc)
 	{
 		Scene::Render(hdc);
+		wchar_t str[50] = L"Play Scene";
+		TextOut(hdc, 0, 30, str, 10);
 	}
 }

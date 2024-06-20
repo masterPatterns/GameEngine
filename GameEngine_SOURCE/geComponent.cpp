@@ -10,7 +10,7 @@ namespace ge
 	
 	}
 
-	void Component::Initialize(float mLSize, float mRSize)
+	void Component::Initialize()
 	{
 
 	}

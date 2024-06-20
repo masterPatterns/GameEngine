@@ -129,13 +129,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="geEndScene.h" />
     <ClInclude Include="geLoadScenes.h" />
     <ClInclude Include="gePlayer.h" />
     <ClInclude Include="gePlayScene.h" />
+    <ClInclude Include="geTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="geEndScene.cpp" />
     <ClCompile Include="gePlayer.cpp" />
     <ClCompile Include="gePlayScene.cpp" />
+    <ClCompile Include="geTitleScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

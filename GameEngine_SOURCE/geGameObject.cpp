@@ -21,7 +21,7 @@ namespace ge
 	{
 		for (Component* comp : mComponents)
 		{
-			comp->Initialize(100, 100);
+			comp->Initialize();
 		}
 
 		//left = 100;

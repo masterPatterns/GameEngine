@@ -11,7 +11,7 @@ namespace ge
 		Component();
 		~Component();
 
-		virtual void Initialize(float mLSize, float mRSize);
+		virtual void Initialize();
 		virtual void Update();
 		virtual void LateUpdate();
 		virtual void Render(HDC hdc);

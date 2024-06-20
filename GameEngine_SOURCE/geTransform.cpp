@@ -9,7 +9,7 @@ namespace ge
 	Transform::~Transform()
 	{
 	}
-	void Transform::Initialize(float mLSize, float mRSize)
+	void Transform::Initialize()
 	{
 
 	}

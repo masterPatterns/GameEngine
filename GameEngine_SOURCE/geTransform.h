@@ -12,7 +12,7 @@ namespace ge
 		Transform();
 		virtual ~Transform();
 
-		void Initialize(float mLSize, float mRSize) override;
+		void Initialize() override;
 		void Update() override;
 		void LateUpdate() override;
 		void Render(HDC hdc) override;

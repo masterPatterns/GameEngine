@@ -13,11 +13,23 @@
       <Filter>Scenes</Filter>
     </ClInclude>
     <ClInclude Include="gePlayer.h" />
+    <ClInclude Include="geTitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="geEndScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gePlayScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
     <ClCompile Include="gePlayer.cpp" />
+    <ClCompile Include="geTitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="geEndScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
