@@ -5,10 +5,10 @@ namespace ge
 	Scene::Scene()
 		: mLayers{}
 	{
-		mLayers.resize((UINT)eLayerType::Max);
+		mLayers.resize((UINT)enums::eLayerType::Max);
 		// 포인터 참조??
 		
-		for (size_t i = 0; i < (UINT)eLayerType::Max; i++)
+		for (size_t i = 0; i < (UINT)enums::eLayerType::Max; i++)
 		{
 			mLayers[i] = new Layer();
 		}
@@ -61,7 +61,7 @@ namespace ge
 		}
 	}
 
-	void Scene::AddGameObject(GameObject* gameObj, const eLayerType type)
+	void Scene::AddGameObject(GameObject* gameObj, const enums::eLayerType type)
 	{
 		mLayers[(UINT)type]->AddGameObject(gameObj);
 	}

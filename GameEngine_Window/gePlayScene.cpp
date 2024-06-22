@@ -10,16 +10,21 @@ namespace ge
 	}
 	void PlayScene::Initialize()
 	{
-		bg = new Player();
-		Transform* tr = bg->AddComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
-		tr->SetName(L"TR");
+		//bg = new Player();
+		//Transform* tr = bg->AddComponent<Transform>();
+		//tr->SetPos(Vector2(0, 0));
+		//tr->SetName(L"TR");
 
+		//SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+		//sr->SetName(L"SR");
+		//sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\CloudOcean.png");
+
+		//AddGameObject(bg, enums::eLayerType::Background);
+
+		bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(100.0f, 100.0f));
 		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
 		sr->SetName(L"SR");
 		sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\CloudOcean.png");
-
-		AddGameObject(bg, eLayerType::Background);
 	}
 	void PlayScene::Update()
 	{
@@ -46,9 +51,8 @@ namespace ge
 	}
 	void PlayScene::OnExit()
 	{
-		bg = new Player();
-		Transform* tr = bg->AddComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
+		//Transform* tr = bg->GetComponent<Transform>();
+		//tr->SetPos(Vector2(0, 0));
 	}
 
 }

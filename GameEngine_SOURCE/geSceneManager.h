@@ -7,10 +7,13 @@ namespace ge
 	{
 	public:
 		template <typename T>
-		static Scene* CreateScene(const std::wstring& name)
+		static Scene* CreateScene(const std::wstring& name, int isActiveScene)
 		{
 			T* scene = new T();
 			scene->SetName(name);
+			if(isActiveScene == 1)
+				mActiveScene = scene;
+
 			scene->Initialize();
 
 			mScene.insert(std::make_pair(name, scene));
@@ -18,20 +21,8 @@ namespace ge
 			return scene;
 		}
 
-		static Scene* LoadScene(const std::wstring& name)
-		{
-			if (mActiveScene)
-				mActiveScene->OnExit();
-
-			std::map<std::wstring, Scene*>::iterator iter = mScene.find(name);
-
-			if (iter == mScene.end()) { return nullptr; }
-
-			mActiveScene = iter->second;
-			mActiveScene->OnEnter();
-
-			return iter->second;
-		}
+		static Scene* LoadScene(const std::wstring& name);
+		static Scene* GetActiveScene() { return mActiveScene; }
 
 		static void Initialize();
 		static void Update();

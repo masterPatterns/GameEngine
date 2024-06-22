@@ -25,6 +25,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)geLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geMissile.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)geObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geSpriteRenderer.h" />

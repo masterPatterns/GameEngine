@@ -19,7 +19,7 @@ namespace ge
 		void AddGameObject(GameObject* gameObjedt);
 
 	private:
-		eLayerType mType;
+		enums::eLayerType mType;
 		std::vector<GameObject*> mGemeObjects;
 	};
 }

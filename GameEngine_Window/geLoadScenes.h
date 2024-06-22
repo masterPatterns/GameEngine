@@ -15,9 +15,9 @@ namespace ge
 {
 	void LoadScenes()
 	{
-		SceneManager::CreateScene<TitleScene>(L"TitleScene");
-		SceneManager::CreateScene<PlayScene>(L"PlayScene");
-		SceneManager::CreateScene<EndScene>(L"EndScene");
+		SceneManager::CreateScene<TitleScene>(L"TitleScene", 0);
+		SceneManager::CreateScene<PlayScene>(L"PlayScene", 1);
+		SceneManager::CreateScene<EndScene>(L"EndScene", 0);
 
 		//SceneManager::LoadScene(L"TitleScene");
 		SceneManager::LoadScene(L"PlayScene");

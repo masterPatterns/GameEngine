@@ -3,7 +3,7 @@
 namespace ge
 {
 	Layer::Layer()
-		: mType(eLayerType::None)
+		: mType(enums::eLayerType::None)
 		, mGemeObjects{}
 	{
 

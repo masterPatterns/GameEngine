@@ -4,7 +4,7 @@ namespace ge
 {
 	GameObject::GameObject()
 	{
-		//initializeTransform();
+		initializeTransform();
 	}
 	GameObject::~GameObject()
 	{
@@ -77,7 +77,6 @@ namespace ge
 	void GameObject::initializeTransform()
 	{
 		AddComponent<Transform>();
-		AddComponent<SpriteRenderer>();
 	}
 
 }

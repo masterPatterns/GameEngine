@@ -3,6 +3,7 @@
 #include "..\\GameEngine_SOURCE\\geGameObject.h"
 #include "..\\GameEngine_SOURCE\\geSceneManager.h"
 #include "gePlayer.h"
+#include "..\\GameEngine_SOURCE\\geObject.h"
 
 namespace ge
 {

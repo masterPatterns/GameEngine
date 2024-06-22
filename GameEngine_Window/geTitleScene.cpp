@@ -19,7 +19,7 @@ namespace ge
 		sr->SetName(L"SRTitle");
 		sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\title.bmp");
 
-		AddGameObject(bg, eLayerType::Background);
+		AddGameObject(bg, enums::eLayerType::Background);
 	}
 	void TitleScene::Update()
 	{

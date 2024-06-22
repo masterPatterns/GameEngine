@@ -19,7 +19,7 @@ namespace ge
 		sr->SetName(L"SREnd");
 		sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\event.bmp");
 
-		AddGameObject(bg, eLayerType::Background);
+		AddGameObject(bg, enums::eLayerType::Background);
 	}
 	void EndScene::Update()
 	{
