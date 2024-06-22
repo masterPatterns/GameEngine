@@ -1,5 +1,8 @@
 #pragma once
 #include "..\\GameEngine_SOURCE\\geGameObject.h"
+#include "..\\GameEngine_SOURCE\\geInput.h"
+#include "..\\GameEngine_SOURCE\\geTransform.h"
+#include "..\\GameEngine_SOURCE\\geTime.h"
 
 namespace ge
 {

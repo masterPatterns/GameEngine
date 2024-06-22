@@ -45,27 +45,9 @@ namespace ge
 			return component;
 		}
 
-		//void SetPosition(float x, float y)
-		//{
-		//	mX = x;
-		//	mY = y;
-		//}
-		//float GetPositionX() { return mX; }
-		//float GetPositionY() { return mY; }
-
 	private:
 		void initializeTransform();
 
 		std::vector<Component*> mComponents;
-
-		//float mX;
-		//float mY;
-		//float left;
-		//float top;
-		//float right;
-		//float bottom;
-
-		//Missile mMissile[10];
-		//int isShoot[10];
 	};
 }

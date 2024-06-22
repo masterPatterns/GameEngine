@@ -3,15 +3,8 @@
 namespace ge
 {
 	GameObject::GameObject()
-		//: mX(0.0f)
-		//, mY(0.0f)
-		//, left(0.0f)
-		//, top(0.0f)
-		//, right(0.0f)
-		//, bottom(0.0f)
 	{
-		//Initialize();
-		initializeTransform();
+		//initializeTransform();
 	}
 	GameObject::~GameObject()
 	{
@@ -23,17 +16,6 @@ namespace ge
 		{
 			comp->Initialize();
 		}
-
-		//left = 100;
-		//top = 100;
-		//right = 200;
-		//bottom = 200;
-		//for (size_t i = 0; i < 10; i++)
-		//{
-		//	mMissile[i].Initialize(20);
-		//	mMissile[i].SetPosition(left, top);
-		//	isShoot[i] = 0;
-		//}
 	}
 
 	void GameObject::Update()

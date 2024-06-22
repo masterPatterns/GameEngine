@@ -6,6 +6,8 @@
 #include <string>
 #include <map>
 
+#include "geMath.h"
+
 #include <mmsystem.h>
 #include <dinput.h>
 #pragma comment(lib, "Msimg32.lib")
@@ -14,4 +16,4 @@
 #include <gdiplus.h>
 #pragma comment(lib, "gdiplus.lib")
 
-#include "geMath.h"
+#include "geEnums.h"

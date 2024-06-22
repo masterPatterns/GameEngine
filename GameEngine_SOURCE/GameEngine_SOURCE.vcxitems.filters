@@ -34,6 +34,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)geApplication.cpp">
       <Filter>High Level Interface</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)geLayer.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)geMissile.h" />
@@ -72,6 +75,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)geApplication.h">
       <Filter>High Level Interface</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geLayer.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geEnums.h">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -91,6 +100,9 @@
     </Filter>
     <Filter Include="High Level Interface">
       <UniqueIdentifier>{bcc91536-487f-4fd8-b022-c5ed075290d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer">
+      <UniqueIdentifier>{3894f9ce-f917-4e21-953b-fff146234a1a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

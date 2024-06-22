@@ -10,7 +10,7 @@ namespace ge
 	}
 	void PlayScene::Initialize()
 	{
-		Player* bg = new Player();
+		bg = new Player();
 		Transform* tr = bg->AddComponent<Transform>();
 		tr->SetPos(Vector2(0, 0));
 		tr->SetName(L"TR");
@@ -19,7 +19,7 @@ namespace ge
 		sr->SetName(L"SR");
 		sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\CloudOcean.png");
 
-		AddGameObject(bg);
+		AddGameObject(bg, eLayerType::Background);
 	}
 	void PlayScene::Update()
 	{
@@ -40,4 +40,15 @@ namespace ge
 		wchar_t str[50] = L"Play Scene";
 		TextOut(hdc, 0, 30, str, 10);
 	}
+
+	void PlayScene::OnEnter()
+	{
+	}
+	void PlayScene::OnExit()
+	{
+		bg = new Player();
+		Transform* tr = bg->AddComponent<Transform>();
+		tr->SetPos(Vector2(0, 0));
+	}
+
 }

@@ -10,7 +10,7 @@ namespace ge
 	}
 	void TitleScene::Initialize()
 	{
-		Player* bg = new Player();
+		bg = new Player();
 		Transform* tr = bg->AddComponent<Transform>();
 		tr->SetPos(Vector2(100.0f, 100.0f));
 		tr->SetName(L"TRTitle");
@@ -19,7 +19,7 @@ namespace ge
 		sr->SetName(L"SRTitle");
 		sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\title.bmp");
 
-		AddGameObject(bg);
+		AddGameObject(bg, eLayerType::Background);
 	}
 	void TitleScene::Update()
 	{
@@ -39,5 +39,15 @@ namespace ge
 		Scene::Render(hdc);
 		wchar_t str[50] = L"Title Scene";
 		TextOut(hdc, 0, 30, str, 11);
+	}
+
+	void TitleScene::OnEnter()
+	{
+	}
+	void TitleScene::OnExit()
+	{
+		bg = new Player();
+		Transform* tr = bg->AddComponent<Transform>();
+		tr->SetPos(Vector2(0, 0));
 	}
 }

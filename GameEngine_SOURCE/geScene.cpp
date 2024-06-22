@@ -3,8 +3,15 @@
 namespace ge
 {
 	Scene::Scene()
-		: mGemeObjects{}
+		: mLayers{}
 	{
+		mLayers.resize((UINT)eLayerType::Max);
+		// 포인터 참조??
+		
+		for (size_t i = 0; i < (UINT)eLayerType::Max; i++)
+		{
+			mLayers[i] = new Layer();
+		}
 	}
 	Scene::~Scene()
 	{
@@ -12,44 +19,60 @@ namespace ge
 
 	void Scene::Initialize()
 	{
-		for (GameObject* gameObj : mGemeObjects)
+		for (Layer* layer : mLayers)
 		{
-			gameObj->Initialize();
+			if (layer == nullptr)
+				continue;
+
+			layer->Initialize();
 		}
 	}
 
 	void Scene::Update()
 	{
-		//for (size_t i = 0; i < mGemeObjects.size(); i++)
-		//{
-		//	mGemeObjects[i]->Update();
-		//}
-
-		// 범위 기반 for문
-		for (GameObject* gameObj : mGemeObjects)
+		for (Layer* layer : mLayers)
 		{
-			gameObj->Update();
+			if (layer == nullptr)
+				continue;
+
+			layer->Update();
 		}
 	}
 
 	void Scene::LateUpdate()
 	{
-		for (GameObject* gameObj : mGemeObjects)
+		for (Layer* layer : mLayers)
 		{
-			gameObj->LateUpdate();
+			if (layer == nullptr)
+				continue;
+
+			layer->LateUpdate();
 		}
 	}
 
 	void Scene::Render(HDC hdc)
 	{
-		for (GameObject* gameObj : mGemeObjects)
+		for (Layer* layer : mLayers)
 		{
-			gameObj->Render(hdc);
+			if (layer == nullptr)
+				continue;
+
+			layer->Render(hdc);
 		}
 	}
 
-	void Scene::AddGameObject(GameObject* gameObjedt)
+	void Scene::AddGameObject(GameObject* gameObj, const eLayerType type)
 	{
-		mGemeObjects.push_back(gameObjedt);
+		mLayers[(UINT)type]->AddGameObject(gameObj);
+	}
+
+	void Scene::OnEnter()
+	{
+
+	}
+
+	void Scene::OnExit()
+	{
+
 	}
 }

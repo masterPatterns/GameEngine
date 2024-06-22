@@ -10,7 +10,7 @@ namespace ge
 	}
 	void EndScene::Initialize()
 	{
-		Player* bg = new Player();
+		bg = new Player();
 		Transform* tr = bg->AddComponent<Transform>();
 		tr->SetPos(Vector2(0, 0));
 		tr->SetName(L"TREnd");
@@ -19,7 +19,7 @@ namespace ge
 		sr->SetName(L"SREnd");
 		sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\event.bmp");
 
-		AddGameObject(bg);
+		AddGameObject(bg, eLayerType::Background);
 	}
 	void EndScene::Update()
 	{
@@ -39,5 +39,15 @@ namespace ge
 		Scene::Render(hdc);
 		wchar_t str[50] = L"End Scene";
 		TextOut(hdc, 0, 30, str, 9);
+	}
+
+	void EndScene::OnEnter()
+	{
+	}
+	void EndScene::OnExit()
+	{
+		bg = new Player();
+		Transform* tr = bg->AddComponent<Transform>();
+		tr->SetPos(Vector2(0, 0));
 	}
 }
