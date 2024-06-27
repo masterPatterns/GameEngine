@@ -3,6 +3,7 @@
 #include "geTransform.h"
 #include "geGameObject.h"
 #include "geComponent.h"
+#include "geTexture.h"
 
 namespace ge
 {
@@ -17,11 +18,11 @@ namespace ge
 		void LateUpdate() override;
 		void Render(HDC hdc) override;
 
-		void ImageLoad(const std::wstring& path);
+		//void ImageLoad(const std::wstring& path);
 
 	private:
-		Gdiplus::Image* mImage;
-		UINT mWidth;
-		UINT mHeight;
+		//Gdiplus::Image* mImage;
+		//UINT mWidth;
+		//UINT mHeight;
 	};
 }

@@ -37,6 +37,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)geLayer.cpp">
       <Filter>Layer</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)geResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)geResources.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)geTexture.cpp">
+      <Filter>Resource\Texture</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)geMissile.h" />
@@ -84,6 +93,15 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)geObject.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geResources.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geTexture.h">
+      <Filter>Resource\Texture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -106,6 +124,12 @@
     </Filter>
     <Filter Include="Layer">
       <UniqueIdentifier>{3894f9ce-f917-4e21-953b-fff146234a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{d2edc6a2-c4b9-4f51-9bf3-7d106340c1c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Texture">
+      <UniqueIdentifier>{c65880a5-45d8-4ed6-ab8a-f3cbfc4cc858}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

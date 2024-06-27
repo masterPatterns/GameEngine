@@ -1,9 +1,10 @@
 #pragma once
+#include "gePlayer.h"
 #include "..\\GameEngine_SOURCE\\geScene.h"
 #include "..\\GameEngine_SOURCE\\geGameObject.h"
 #include "..\\GameEngine_SOURCE\\geSceneManager.h"
-#include "gePlayer.h"
 #include "..\\GameEngine_SOURCE\\geObject.h"
+#include "..\\GameEngine_SOURCE\\geTexture.h"
 
 namespace ge
 {

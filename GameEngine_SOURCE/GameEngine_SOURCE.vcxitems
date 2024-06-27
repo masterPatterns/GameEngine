@@ -26,9 +26,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)geMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geMissile.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)geResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)geResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geSpriteRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)geTexture.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geTime.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)geTransform.h" />
   </ItemGroup>
@@ -42,9 +45,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)geLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)geMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)geMissile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)geResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)geResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)geScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)geSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)geSpriteRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)geTexture.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)geTime.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)geTransform.cpp" />
   </ItemGroup>

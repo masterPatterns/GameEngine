@@ -17,7 +17,7 @@ namespace ge
 
 		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
 		sr->SetName(L"SREnd");
-		sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\event.bmp");
+		//sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\event.bmp");
 
 		AddGameObject(bg, enums::eLayerType::Background);
 	}
