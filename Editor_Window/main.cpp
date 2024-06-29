@@ -7,6 +7,7 @@
 #include "..\\GameEngine_SOURCE\\geApplication.h"
 
 #include "..\\GameEngine_Window\\geLoadScenes.h"
+#include "..\\GameEngine_Window\\geLoadResources.h"
 
 ge::Application application;
 
@@ -132,6 +133,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    Gdiplus::GdiplusStartup(&gpToken, &gpsi, NULL);
 
    //load Scenes
+   ge::LoadResources();
    ge::LoadScenes();
 
    return TRUE;

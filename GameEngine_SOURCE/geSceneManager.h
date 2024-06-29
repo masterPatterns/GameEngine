@@ -14,6 +14,7 @@ namespace ge
 			if(isActiveScene == 1)
 				mActiveScene = scene;
 
+			mInitScene = scene;
 			scene->Initialize();
 
 			mScene.insert(std::make_pair(name, scene));
@@ -23,6 +24,7 @@ namespace ge
 
 		static Scene* LoadScene(const std::wstring& name);
 		static Scene* GetActiveScene() { return mActiveScene; }
+		static Scene* GetWorkScene() { return mInitScene; }
 
 		static void Initialize();
 		static void Update();
@@ -34,6 +36,7 @@ namespace ge
 		//static std::vector<Scene*> mScene;
 		static std::map<std::wstring, Scene*> mScene;
 		static Scene* mActiveScene;
+		static Scene* mInitScene;
 
 	};
 }

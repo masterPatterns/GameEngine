@@ -3,9 +3,8 @@
 namespace ge
 {
 	SpriteRenderer::SpriteRenderer()
-		//: mImage(nullptr)
-		//, mWidth(0)
-		//, mHeight(0)
+		: mTexture(nullptr)
+		, mSize(Vector2::One)
 	{
 	}
 	SpriteRenderer::~SpriteRenderer()
@@ -23,27 +22,22 @@ namespace ge
 	}
 	void SpriteRenderer::Render(HDC hdc)
 	{
-		HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
-		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBrush);
-
-		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-		HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
-		SelectObject(hdc, oldPen);
+		if (mTexture == nullptr)
+			assert(false);
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
 
-		Gdiplus::Graphics graphcis(hdc);
-		//graphcis.DrawImage(mImage, Gdiplus::Rect(pos.x, pos.y, mWidth, mHeight));
-
-		//Rectangle(hdc, tr->GetX(), tr->GetY(), getLSize() + tr->GetX(), getRSize() + tr->GetY());
-
-		SelectObject(hdc, oldBrush);
-		DeleteObject(blueBrush);
-		DeleteObject(redPen);
-
-		/*if (isShoot[0] == 1) {
-			mMissile[0].Render(hdc);
-		}*/
+		if (mTexture->GetTextureType() == graphcis::Texture::eTextureType::Bmp)
+		{
+			TransparentBlt(hdc, pos.x, pos.y, mTexture->GetWidth() * mSize.x, mTexture->GetHeight() * mSize.y, mTexture->GetHdc(), 0, 0,
+				mTexture->GetWidth(), mTexture->GetHeight(), RGB(255, 0, 255));
+		}
+		else if (mTexture->GetTextureType() == graphcis::Texture::eTextureType::Png)
+		{
+			Gdiplus::Graphics graphcis(hdc);
+			graphcis.DrawImage(mTexture->GetImage()
+				, Gdiplus::Rect(pos.x, pos.y, mTexture->GetWidth() * mSize.x, mTexture->GetHeight() * mSize.y));
+		}
 	}
 }

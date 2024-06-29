@@ -10,14 +10,13 @@ namespace ge
 	}
 	void PlayScene::Initialize()
 	{
-		bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(100.0f, 100.0f));
+		//bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(100.0f, 100.0f));
+		bg = object::Instantiate<Player>(enums::eLayerType::Background);
 		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
 		sr->SetName(L"SR");
 
-		graphcis::Texture* tex = new graphcis::Texture();
-		tex->Load(L"..\\Resources\\CloudOcean.png");
-
-		//sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\CloudOcean.png");
+		graphcis::Texture* bg = Resources::Find<graphcis::Texture>(L"BG");
+		sr->SetTexture(bg);
 	}
 	void PlayScene::Update()
 	{

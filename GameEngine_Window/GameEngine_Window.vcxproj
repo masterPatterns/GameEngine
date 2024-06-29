@@ -134,6 +134,7 @@
     <ClInclude Include="gePlayer.h" />
     <ClInclude Include="gePlayScene.h" />
     <ClInclude Include="geTitleScene.h" />
+    <ClInclude Include="geLoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="geEndScene.cpp" />

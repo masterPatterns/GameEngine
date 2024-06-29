@@ -19,6 +19,7 @@
     <ClInclude Include="geEndScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="geLoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gePlayScene.cpp">

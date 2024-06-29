@@ -31,4 +31,16 @@ namespace ge::object
 
 		return gameObject;
 	}
+
+	template <typename T>
+	static T* Instantiate(ge::enums::eLayerType type, std::wstring sceneName)
+	{
+		T* gameObject = new T();
+		Scene* workScene = SceneManager::GetWorkScene();
+		Layer* layer = workScene->GetLayer(type);
+		layer->AddGameObject(gameObject);
+
+		return gameObject;
+	}
+
 }

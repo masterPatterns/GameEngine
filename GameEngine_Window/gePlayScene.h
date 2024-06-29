@@ -5,6 +5,7 @@
 #include "..\\GameEngine_SOURCE\\geSceneManager.h"
 #include "..\\GameEngine_SOURCE\\geObject.h"
 #include "..\\GameEngine_SOURCE\\geTexture.h"
+#include "..\\GameEngine_SOURCE\\geResources.h"
 
 namespace ge
 {

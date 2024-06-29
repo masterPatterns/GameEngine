@@ -4,6 +4,7 @@ namespace ge
 {
 	std::map<std::wstring, Scene*> SceneManager::mScene = {};
 	Scene* SceneManager::mActiveScene = nullptr;
+	Scene* SceneManager::mInitScene = nullptr;
 
 	Scene* SceneManager::LoadScene(const std::wstring& name)
 	{

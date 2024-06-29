@@ -10,16 +10,23 @@ namespace ge
 	}
 	void TitleScene::Initialize()
 	{
-		bg = new Player();
-		Transform* tr = bg->AddComponent<Transform>();
-		tr->SetPos(Vector2(100.0f, 100.0f));
-		tr->SetName(L"TRTitle");
+		//bg = new Player();
+		//Transform* tr = bg->AddComponent<Transform>();
+		//tr->SetPos(Vector2(100.0f, 100.0f));
+		//tr->SetName(L"TRTitle");
 
-		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
-		sr->SetName(L"SRTitle");
+		//SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+		//sr->SetName(L"SRTitle");
 		//sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\title.bmp");
 
-		AddGameObject(bg, enums::eLayerType::Background);
+		//AddGameObject(bg, enums::eLayerType::Background);
+
+		bg = object::Instantiate<Player>(enums::eLayerType::Background, L"TitleScene");
+		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+		sr->SetName(L"SRTitle");
+
+		graphcis::Texture* bg = Resources::Find<graphcis::Texture>(L"TITLE");
+		sr->SetTexture(bg);
 	}
 	void TitleScene::Update()
 	{
@@ -46,8 +53,8 @@ namespace ge
 	}
 	void TitleScene::OnExit()
 	{
-		bg = new Player();
+		/*bg = new Player();
 		Transform* tr = bg->AddComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
+		tr->SetPos(Vector2(0, 0));*/
 	}
 }

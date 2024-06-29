@@ -10,16 +10,23 @@ namespace ge
 	}
 	void EndScene::Initialize()
 	{
-		bg = new Player();
-		Transform* tr = bg->AddComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
-		tr->SetName(L"TREnd");
+		//bg = new Player();
+		//Transform* tr = bg->AddComponent<Transform>();
+		//tr->SetPos(Vector2(0, 0));
+		//tr->SetName(L"TREnd");
 
-		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
-		sr->SetName(L"SREnd");
+		//SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+		//sr->SetName(L"SREnd");
 		//sr->ImageLoad(L"K:\\workspace\\test\\GameEngine\\Resources\\event.bmp");
 
-		AddGameObject(bg, enums::eLayerType::Background);
+		//AddGameObject(bg, enums::eLayerType::Background);
+
+		bg = object::Instantiate<Player>(enums::eLayerType::Background, L"EndScene");
+		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+		sr->SetName(L"SREnd");
+
+		graphcis::Texture* bg = Resources::Find<graphcis::Texture>(L"END");
+		sr->SetTexture(bg);
 	}
 	void EndScene::Update()
 	{
@@ -46,8 +53,8 @@ namespace ge
 	}
 	void EndScene::OnExit()
 	{
-		bg = new Player();
+		/*bg = new Player();
 		Transform* tr = bg->AddComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
+		tr->SetPos(Vector2(0, 0));*/
 	}
 }
