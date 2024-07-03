@@ -4,6 +4,12 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{73de3ffe-7309-4bf9-adee-e4f02e175517}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{e73ec377-7750-4b35-a860-3961fe2090ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{f714b8ce-8629-448d-8cfe-836cbe069c83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="geLoadScenes.h">
@@ -12,7 +18,6 @@
     <ClInclude Include="gePlayScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="gePlayer.h" />
     <ClInclude Include="geTitleScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
@@ -20,17 +25,35 @@
       <Filter>Scenes</Filter>
     </ClInclude>
     <ClInclude Include="geLoadResources.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="gePlayerScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="gePlayer.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gePlayScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="gePlayer.cpp" />
     <ClCompile Include="geTitleScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
     <ClCompile Include="geEndScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="gePlayerScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="gePlayer.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameEngine_Window.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

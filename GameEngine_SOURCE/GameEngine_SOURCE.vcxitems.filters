@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)geMissile.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)geSpriteRenderer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)geTransform.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)geEntity.cpp">
       <Filter>Common</Filter>
     </ClCompile>
@@ -46,11 +44,24 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)geTexture.cpp">
       <Filter>Resource\Texture</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)geScript.cpp">
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)geTransform.cpp">
+      <Filter>Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)geSpriteRenderer.cpp">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)geCamera.cpp">
+      <Filter>Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)geRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)geMissile.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)geSpriteRenderer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)geTransform.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
       <Filter>Common</Filter>
     </ClInclude>
@@ -102,6 +113,21 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)geTexture.h">
       <Filter>Resource\Texture</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geScript.h">
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geTransform.h">
+      <Filter>Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geSpriteRenderer.h">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geCamera.h">
+      <Filter>Component\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)geRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -131,5 +157,23 @@
     <Filter Include="Resource\Texture">
       <UniqueIdentifier>{c65880a5-45d8-4ed6-ab8a-f3cbfc4cc858}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Component\Script">
+      <UniqueIdentifier>{f3861f4c-0c58-4c04-9cc1-2d9ca4a4c212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Transform">
+      <UniqueIdentifier>{b502859c-fe6f-4b8b-8e0b-e971c3ddbb3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\SpriteRenderer">
+      <UniqueIdentifier>{9597b8ab-9130-4695-94a1-52d01aa24cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Camera">
+      <UniqueIdentifier>{aba5f2d0-2dcc-4212-8acc-171c190cd39c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{f35bd302-98a9-483b-b925-d5d00c0b492e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)ClassDiagram.cd" />
   </ItemGroup>
 </Project>

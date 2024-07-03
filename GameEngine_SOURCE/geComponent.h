@@ -4,11 +4,10 @@
 namespace ge
 {
 	class GameObject;
-
 	class Component : public Entity
 	{
 	public:
-		Component();
+		Component(enums::eComponentType type);
 		~Component();
 
 		virtual void Initialize();
@@ -18,8 +17,10 @@ namespace ge
 
 		GameObject* GetOwner() const { return mOwner; }
 		void SetOwner(GameObject* owner) { mOwner = owner; }
+		enums::eComponentType GetType() { return mType; }
 
 	private:
 		GameObject* mOwner;
+		enums::eComponentType mType;
 	};
 }

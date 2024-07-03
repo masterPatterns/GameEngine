@@ -22,6 +22,8 @@ namespace ge
 		void Render();
 
 		HDC GetHdc() { return mHdc; }
+		UINT GetWidth() { return mWidth; }
+		UINT GetHight() { return mHight; }
 
 	private:
 		void clearRenderTarget();

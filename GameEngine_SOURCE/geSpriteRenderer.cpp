@@ -1,10 +1,17 @@
 #include "geSpriteRenderer.h"
+#include "geEntity.h"
+#include "geTransform.h"
+#include "geGameObject.h"
+#include "geComponent.h"
+#include "geTexture.h"
+#include "geRenderer.h"
 
 namespace ge
 {
 	SpriteRenderer::SpriteRenderer()
 		: mTexture(nullptr)
 		, mSize(Vector2::One)
+		, Component(enums::eComponentType::SpriteRenderer)
 	{
 	}
 	SpriteRenderer::~SpriteRenderer()
@@ -27,7 +34,7 @@ namespace ge
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
-
+		pos = renderer::mainCamera->CaluatePosition(pos);
 		if (mTexture->GetTextureType() == graphcis::Texture::eTextureType::Bmp)
 		{
 			TransparentBlt(hdc, pos.x, pos.y, mTexture->GetWidth() * mSize.x, mTexture->GetHeight() * mSize.y, mTexture->GetHdc(), 0, 0,

@@ -3,6 +3,7 @@
 namespace ge
 {
 	PlayScene::PlayScene()
+		: bg{}
 	{
 	}
 	PlayScene::~PlayScene()
@@ -10,13 +11,23 @@ namespace ge
 	}
 	void PlayScene::Initialize()
 	{
+		// main camera
+		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None);
+		Camera* cameraComp = camera->AddComponent<Camera>();
+		renderer::mainCamera = cameraComp;
+
+		camera->AddComponent<PlayerScript>();
+
 		//bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(100.0f, 100.0f));
 		bg = object::Instantiate<Player>(enums::eLayerType::Background);
 		SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
 		sr->SetName(L"SR");
+		//bg->AddComponent<PlayerScript>();
 
-		graphcis::Texture* bg = Resources::Find<graphcis::Texture>(L"BG");
-		sr->SetTexture(bg);
+		graphcis::Texture* bgtex = Resources::Find<graphcis::Texture>(L"BG");
+		sr->SetTexture(bgtex);
+		
+		Scene::Initialize();
 	}
 	void PlayScene::Update()
 	{

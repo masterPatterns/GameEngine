@@ -106,6 +106,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,6 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,15 +134,24 @@
     <ClInclude Include="geEndScene.h" />
     <ClInclude Include="geLoadScenes.h" />
     <ClInclude Include="gePlayer.h" />
+    <ClInclude Include="gePlayerScript.h" />
     <ClInclude Include="gePlayScene.h" />
     <ClInclude Include="geTitleScene.h" />
     <ClInclude Include="geLoadResources.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="geEndScene.cpp" />
     <ClCompile Include="gePlayer.cpp" />
+    <ClCompile Include="gePlayerScript.cpp" />
     <ClCompile Include="gePlayScene.cpp" />
     <ClCompile Include="geTitleScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameEngine_Window.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
