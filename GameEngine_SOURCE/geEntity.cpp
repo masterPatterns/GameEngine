@@ -1,4 +1,5 @@
 #include "geEntity.h"
+using namespace ge::math;
 
 namespace ge
 {

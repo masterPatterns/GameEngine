@@ -1,203 +1,210 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ge::EndScene" Collapsed="true">
-    <Position X="11.75" Y="3.25" Width="1.5" />
+  <Class Name="ge::EndScene">
+    <Position X="7.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAASIAAAAAIAAAAAAQAAAABJAAAAAAAAA=</HashCode>
       <FileName>geEndScene.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Player" Collapsed="true">
-    <Position X="20.75" Y="3.25" Width="1.5" />
+  <Class Name="ge::Player">
+    <Position X="11.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQABAAAAAAAAQAAAAAAIAAAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>gePlayer.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::PlayScene" Collapsed="true">
-    <Position X="16.25" Y="3.25" Width="1.5" />
+  <Class Name="ge::PlayScene">
+    <Position X="11.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAYAAAAAAAAAAQIAAAAAIAAACAAQAAAAAJAAAAAAAAA=</HashCode>
       <FileName>gePlayScene.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::PlayerScript" Collapsed="true">
-    <Position X="5" Y="4.75" Width="1.5" />
+  <Class Name="ge::PlayerScript">
+    <Position X="4" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQABAAAABAAAQAAAAAAIAAAAAAAgAAAABAAAAAAAAA=</HashCode>
       <FileName>gePlayerScript.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Application" Collapsed="true">
-    <Position X="23.25" Y="0.5" Width="1.5" />
+  <Class Name="ge::Application">
+    <Position X="0.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAQAAAAQABAABQFAQAAgIQAACAACIAAAABEAAEQAAAM=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geApplication.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::GameObject" Collapsed="true">
-    <Position X="20.75" Y="1.75" Width="1.5" />
+  <Class Name="ge::GameObject">
+    <Position X="11.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABQAAAAAAAAIAQAAAoAAJAAAAAAAAAAAABAAAAIAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geGameObject.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Component" Collapsed="true">
-    <Position X="3.75" Y="1.75" Width="1.5" />
+  <Class Name="ge::Component">
+    <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQgAAAIAIAAAQAAAAAAIBAAAAAAAAEAABBCAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geComponent.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Entity" Collapsed="true">
-    <Position X="10.5" Y="0.5" Width="1.5" />
+  <Class Name="ge::Entity">
+    <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAgAQAAABAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geEntity.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ge::GameObject2" Collapsed="true">
-    <Position X="25" Y="0.5" Width="1.5" />
+    <Position X="7.75" Y="13" Width="1.5" />
     <TypeIdentifier>
       <HashCode>KBQAAAAAAiAAAQAAgAAAIAAAAAAAAgAAABAAAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geGameObject2.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Input" Collapsed="true">
-    <Position X="26.75" Y="0.5" Width="1.5" />
+  <Class Name="ge::Input">
+    <Position X="5.75" Y="10.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="ge::Input::Key" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>E:\Project\GameEngine\GameEngine_SOURCE\geInput.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAQAIAAAAAgAAAACCEAAAAwAKAAAAABAAAAAAAEAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geInput.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Layer" Collapsed="true">
-    <Position X="9.5" Y="1.75" Width="1.5" />
+  <Class Name="ge::Layer">
+    <Position X="4" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AARAAAQAAIAAAQAAAAAAIBAAAAAAAAAEABAAAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geLayer.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ge::Missile" Collapsed="true">
-    <Position X="23.25" Y="1.5" Width="1.5" />
+    <Position X="9.5" Y="13" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAgCAAAQAAgIAAIEAAAAAAAgAAABAAAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geMissile.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Scene" Collapsed="true">
-    <Position X="14" Y="1.75" Width="1.5" />
+  <Class Name="ge::Scene">
+    <Position X="7.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AARAAAAAAAAAAQAAgAAAIAAAQAAQAAAABJAAAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geScene.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::SceneManager" Collapsed="true">
-    <Position X="26.75" Y="1.5" Width="1.5" />
+  <Class Name="ge::SceneManager">
+    <Position X="2.25" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAARAAAAAQAAAABAKAAAAAAAAAgAABAAACAIAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geSceneManager.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::SpriteRenderer" Collapsed="true">
-    <Position X="2.75" Y="3.25" Width="1.5" />
+  <Class Name="ge::SpriteRenderer">
+    <Position X="2.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIQQAAAAAAAAAQBAAAAIIAAAACAAAAAAABAAAAAAIAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geSpriteRenderer.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Time" Collapsed="true">
-    <Position X="23.25" Y="2.5" Width="1.5" />
+  <Class Name="ge::Time">
+    <Position X="4" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAECABAAAAAAAAAAAAAAACABAAAAEAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geTime.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Transform" Collapsed="true">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+  <Class Name="ge::Transform">
+    <Position X="0.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIQAAAAAACAAAQAAAAAAIAQAAAAAAAAAABAAAAAAAoA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geTransform.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::TitleScene" Collapsed="true">
-    <Position X="14" Y="3.25" Width="1.5" />
+  <Class Name="ge::TitleScene">
+    <Position X="9.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAQIAAAAAIIAAAAAQAIAAAJAAAAAAAAA=</HashCode>
       <FileName>geTitleScene.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Resource" Collapsed="true">
-    <Position X="18.5" Y="1.75" Width="1.5" />
+  <Class Name="ge::Resource">
+    <Position X="9.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAIAAAAAAAAAAIABAAAAACIAAAAAAAAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geResource.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Resources" Collapsed="true">
-    <Position X="25" Y="1.5" Width="1.5" />
+  <Class Name="ge::Resources">
+    <Position X="2.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geResources.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Script" Collapsed="true">
-    <Position X="5" Y="3.25" Width="1.5" />
+  <Class Name="ge::Script">
+    <Position X="4" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAQAAAAAAIAAAAAAAAAAAABAAAAAhAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geScript.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::Camera" Collapsed="true">
-    <Position X="7.25" Y="3.25" Width="1.5" />
+  <Class Name="ge::Camera">
+    <Position X="5.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAwCAAAAAAAAAQAAQAAAIAAAQAAACAAAABAAABAAACA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geCamera.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ge::graphcis::Texture" Collapsed="true">
-    <Position X="18.5" Y="3.25" Width="1.5" />
+  <Class Name="ge::graphcis::Texture">
+    <Position X="9.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAgAAQAAAAhAAAAAAAABBQABAEAAAAAAIAAEQAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geTexture.h</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="ge::math::Vector2" Collapsed="true">
-    <Position X="23.25" Y="3.75" Width="1.5" />
+    <Position X="4" Y="13.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAQAAAAAAAABgAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geMath.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Enum Name="ge::eKeyState" Collapsed="true">
-    <Position X="26.75" Y="5" Width="1.5" />
+    <Position X="11.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAI=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geInput.h</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="ge::eKeyCode" Collapsed="true">
-    <Position X="25" Y="5" Width="1.5" />
+    <Position X="9.5" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAACIAAAAAAAAAAAAAAAAAAAAAAAAACACAvv//YQM=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geInput.h</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="ge::enums::eComponentType" Collapsed="true">
-    <Position X="23.25" Y="5" Width="1.5" />
+    <Position X="7.75" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAICAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgIAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geEnums.h</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="ge::enums::eLayerType" Collapsed="true">
-    <Position X="23.25" Y="5.75" Width="1.5" />
+    <Position X="7.75" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAgAQEAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geEnums.h</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="ge::enums::eResourceType" Collapsed="true">
-    <Position X="25" Y="5.75" Width="1.5" />
+    <Position X="9.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIIAAAAAAAA=</HashCode>
       <FileName>E:\Project\GameEngine\GameEngine_SOURCE\geEnums.h</FileName>
