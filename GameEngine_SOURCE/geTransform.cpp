@@ -3,8 +3,10 @@
 namespace ge
 {
 	Transform::Transform()
-		: mPosition(0, 0)
-		, Component(enums::eComponentType::Transform)
+		: Component(enums::eComponentType::Transform)
+		, mPosition(0, 0)
+		, mScale(Vector2::One)
+		, mRotation(0.0f)
 	{
 	}
 	Transform::~Transform()

@@ -1,14 +1,17 @@
 #pragma once
 #include "geComponent.h"
 #include "geAnimation.h"
+#include "geResources.h"
+#include "geTexture.h"
 
 namespace ge
 {
+	class Animation;
 	class Animator : public Component
 	{
 	public:
 		Animator();
-		~Animator();
+		virtual ~Animator();
 
 		void Initialize() override;
 		void Update() override;

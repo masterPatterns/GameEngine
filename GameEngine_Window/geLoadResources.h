@@ -9,5 +9,7 @@ namespace ge
 		Resources::Load<graphcis::Texture>(L"TITLE", L"..\\Resources\\title.bmp");
 		Resources::Load<graphcis::Texture>(L"BG", L"..\\Resources\\CloudOcean.png");
 		Resources::Load<graphcis::Texture>(L"END", L"..\\Resources\\event.bmp");
+
+		Resources::Load<graphcis::Texture>(L"Cat", L"..\\Resources\\ChickenAlpha.bmp");
 	}
 }

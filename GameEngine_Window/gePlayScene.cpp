@@ -4,6 +4,7 @@ namespace ge
 {
 	PlayScene::PlayScene()
 		: bg{}
+		, mPlayer{}
 	{
 	}
 	PlayScene::~PlayScene()
@@ -15,8 +16,32 @@ namespace ge
 		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None);
 		Camera* cameraComp = camera->AddComponent<Camera>();
 		renderer::mainCamera = cameraComp;
+		//camera->AddComponent<CameraScript>();
 
-		camera->AddComponent<PlayerScript>();
+		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
+		mPlayer->AddComponent<PlayerScript>();
+
+		graphcis::Texture* catTexture = Resources::Find<graphcis::Texture>(L"Cat");
+		Animator* animator = mPlayer->AddComponent<Animator>();
+		animator->CreateAnimation(L"DownWalk", catTexture
+			, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"RightWalk", catTexture
+			, Vector2(0.0f, 32.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"UpWalk", catTexture
+			, Vector2(0.0f, 64.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"LeftWalk", catTexture
+			, Vector2(0.0f, 96.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"SitDown", catTexture
+			, Vector2(0.0f, 128.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		animator->CreateAnimation(L"Grooming", catTexture
+			, Vector2(0.0f, 160.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+
+
+		animator->PlayAnimation(L"SitDown", false);
+
+		mPlayer->GetComponent<Transform>()->SetPos(Vector2(100.0f, 100.0f));
+		mPlayer->GetComponent<Transform>()->SetScale(Vector2(3.0f, 3.0f));
+		mPlayer->GetComponent<Transform>()->SetRotation(0.0f);
 
 		//bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(100.0f, 100.0f));
 		bg = object::Instantiate<Player>(enums::eLayerType::Background);

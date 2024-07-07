@@ -2,6 +2,10 @@
 #include "geResource.h"
 #include "geTexture.h"
 #include "geTime.h"
+#include "geTransform.h"
+#include "geGameObject.h"
+#include "geAnimator.h"
+#include "geRenderer.h"
 
 namespace ge
 {
@@ -26,7 +30,7 @@ namespace ge
 		};
 
 		Animation();
-		~Animation();
+		virtual ~Animation();
 
 		HRESULT Load(const std::wstring& path) override;
 

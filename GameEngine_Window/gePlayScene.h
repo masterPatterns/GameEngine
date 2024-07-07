@@ -1,6 +1,7 @@
 #pragma once
 #include "gePlayer.h"
 #include "gePlayerScript.h"
+#include "geCameraScript.h"
 #include "..\\GameEngine_SOURCE\\geScene.h"
 #include "..\\GameEngine_SOURCE\\geGameObject.h"
 #include "..\\GameEngine_SOURCE\\geSceneManager.h"
@@ -8,7 +9,8 @@
 #include "..\\GameEngine_SOURCE\\geTexture.h"
 #include "..\\GameEngine_SOURCE\\geResources.h"
 #include "..\\GameEngine_SOURCE\\geCamera.h"
-#include "..\\GameEngine_SOURCE\\geRenderer.h"
+#include "..\\GameEngine_SOURCE\\geRenderer.h".
+#include "..\\GameEngine_SOURCE\\geAnimator.h"
 
 namespace ge
 {
@@ -28,5 +30,6 @@ namespace ge
 
 	private:
 		class Player* bg;
+		class Player* mPlayer;
 	};
 }

@@ -4,24 +4,14 @@
 #include "..\\GameEngine_SOURCE\\geInput.h"
 #include "..\\GameEngine_SOURCE\\geTransform.h"
 #include "..\\GameEngine_SOURCE\\geTime.h"
-#include "..\\GameEngine_SOURCE\\geAnimator.h"
 
 namespace ge
 {
-	class PlayerScript : public Script
+	class CameraScript : public Script
 	{
 	public:
-		enum class eState
-		{
-			SitDown,
-			Walk,
-			Sleep,
-			Attack,
-		};
-
-
-		PlayerScript();
-		~PlayerScript();
+		CameraScript();
+		~CameraScript();
 
 		void Initialize() override;
 		void Update() override;
@@ -29,13 +19,7 @@ namespace ge
 		void Render(HDC hdc) override;
 
 		void PositionMove(int posiAndDire, float mSpeed);
-
 	private:
-		void sitDown();
-		void move();
-
-	private:
-		eState mState;
-		class Animator* mAnimator;
+		
 	};
 }
