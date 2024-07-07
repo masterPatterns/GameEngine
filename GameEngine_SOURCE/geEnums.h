@@ -18,6 +18,7 @@ namespace ge::enums
 		Background,
 		//Tree
 		//character
+		Animal,
 		Player,
 		Max = 16,
 	};

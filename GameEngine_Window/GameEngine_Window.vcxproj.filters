@@ -35,6 +35,12 @@
     <ClInclude Include="geCameraScript.h">
       <Filter>Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="geCat.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="geCatScript.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gePlayScene.cpp">
@@ -53,6 +59,12 @@
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="geCameraScript.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="geCat.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="geCatScript.cpp">
       <Filter>Scripts</Filter>
     </ClCompile>
   </ItemGroup>

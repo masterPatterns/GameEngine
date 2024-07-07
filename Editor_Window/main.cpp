@@ -136,6 +136,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    ge::LoadResources();
    ge::LoadScenes();
 
+   int a = 0;
+   srand((unsigned int)(&a));
+
    return TRUE;
 }
 

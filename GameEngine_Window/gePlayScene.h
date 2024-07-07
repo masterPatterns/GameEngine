@@ -1,7 +1,9 @@
 #pragma once
 #include "gePlayer.h"
+#include "geCat.h"
 #include "gePlayerScript.h"
 #include "geCameraScript.h"
+#include "geCatScript.h"
 #include "..\\GameEngine_SOURCE\\geScene.h"
 #include "..\\GameEngine_SOURCE\\geGameObject.h"
 #include "..\\GameEngine_SOURCE\\geSceneManager.h"

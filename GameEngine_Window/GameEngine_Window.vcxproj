@@ -132,6 +132,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="geCameraScript.h" />
+    <ClInclude Include="geCat.h" />
+    <ClInclude Include="geCatScript.h" />
     <ClInclude Include="geEndScene.h" />
     <ClInclude Include="geLoadScenes.h" />
     <ClInclude Include="gePlayer.h" />
@@ -143,6 +145,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="geCameraScript.cpp" />
+    <ClCompile Include="geCat.cpp" />
+    <ClCompile Include="geCatScript.cpp" />
     <ClCompile Include="geEndScene.cpp" />
     <ClCompile Include="gePlayer.cpp" />
     <ClCompile Include="gePlayerScript.cpp" />
