@@ -16,6 +16,7 @@ namespace ge
 			SitDown,
 			Walk,
 			Sleep,
+			GiveWater,
 			Attack,
 		};
 

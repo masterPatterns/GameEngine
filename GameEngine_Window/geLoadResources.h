@@ -11,5 +11,6 @@ namespace ge
 		Resources::Load<graphcis::Texture>(L"END", L"..\\Resources\\event.bmp");
 
 		Resources::Load<graphcis::Texture>(L"Cat", L"..\\Resources\\ChickenAlpha.bmp");
+		Resources::Load<graphcis::Texture>(L"Player", L"..\\Resources\\Player.bmp");
 	}
 }
