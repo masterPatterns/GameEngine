@@ -13,7 +13,7 @@ namespace ge
 	public:
 		enum class eState
 		{
-			SitDown,
+			Idle,
 			Walk,
 			Sleep,
 			GiveWater,
@@ -32,8 +32,9 @@ namespace ge
 		void PositionMove(int posiAndDire, float mSpeed);
 
 	private:
-		void sitDown();
+		void idle();
 		void move();
+		void giveWater();
 
 	private:
 		eState mState;

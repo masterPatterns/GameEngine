@@ -3,7 +3,7 @@
 namespace ge
 {
 	PlayerScript::PlayerScript()
-		: mState(PlayerScript::eState::SitDown)
+		: mState(PlayerScript::eState::Idle)
 		, mAnimator(nullptr)
 	{
 	}
@@ -23,8 +23,8 @@ namespace ge
 
 		switch (mState)
 		{
-		case ge::PlayerScript::eState::SitDown:
-			sitDown();
+		case ge::PlayerScript::eState::Idle:
+			idle();
 			break;
 		case ge::PlayerScript::eState::Walk:
 			move();
@@ -32,6 +32,7 @@ namespace ge
 		case ge::PlayerScript::eState::Sleep:
 			break;
 		case ge::PlayerScript::eState::GiveWater:
+			giveWater();
 			break;
 		case ge::PlayerScript::eState::Attack:
 			break;
@@ -70,8 +71,16 @@ namespace ge
 
 		tr->SetPos(pos);
 	}
-	void PlayerScript::sitDown()
+	void PlayerScript::idle()
 	{
+		if (Input::GetKey(eKeyCode::LButton))
+		{
+			mState = PlayerScript::eState::GiveWater;
+			mAnimator->PlayAnimation(L"FrontGiveWater", false);
+
+			Vector2 mousePos = Input::GetMousePosition();
+		}
+
 		if (Input::GetKey(eKeyCode::Left))
 		{
 			mState = PlayerScript::eState::Walk;
@@ -95,8 +104,6 @@ namespace ge
 	}
 	void PlayerScript::move()
 	{
-
-
 		if (Input::GetKey(eKeyCode::Left))
 		{
 			PositionMove(2, 200.0f);
@@ -116,9 +123,17 @@ namespace ge
 
 		if (Input::GetKeyUp(eKeyCode::Left) || Input::GetKeyUp(eKeyCode::Right) || Input::GetKeyUp(eKeyCode::Up) || Input::GetKeyUp(eKeyCode::Down))
 		{
-			mState = PlayerScript::eState::SitDown;
+			mState = PlayerScript::eState::Idle;
 			mAnimator->PlayAnimation(L"SitDown", false);
 		}
 		
+	}
+	void PlayerScript::giveWater()
+	{
+		if (mAnimator->IsComplete())
+		{
+			mState = eState::Idle;
+			mAnimator->PlayAnimation(L"Idle", false);
+		}
 	}
 }

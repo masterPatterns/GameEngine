@@ -21,6 +21,7 @@ namespace ge
 		void LateUpdate();
 		void Render();
 
+		HWND GetHwnd() { return mHwnd; }
 		HDC GetHdc() { return mHdc; }
 		UINT GetWidth() { return mWidth; }
 		UINT GetHight() { return mHight; }

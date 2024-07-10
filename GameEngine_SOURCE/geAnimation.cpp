@@ -1,4 +1,9 @@
 #include "geAnimation.h"
+#include "geTime.h"
+#include "geTransform.h"
+#include "geGameObject.h"
+#include "geAnimator.h"
+#include "geRenderer.h"
 
 namespace ge
 {
@@ -93,9 +98,6 @@ namespace ge
 				, nullptr
 			);
 		}
-
-		
-
 	}
 	void Animation::CreateAnimation(const std::wstring& name, graphcis::Texture* spriteSheet
 		, Vector2 leftTop, Vector2 size, Vector2 offset, UINT spriteLegth, float duration)

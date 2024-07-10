@@ -1,12 +1,9 @@
 #pragma once
 #include "geComponent.h"
 #include "geAnimation.h"
-#include "geResources.h"
-#include "geTexture.h"
 
 namespace ge
 {
-	class Animation;
 	class Animator : public Component
 	{
 	public:
@@ -28,6 +25,8 @@ namespace ge
 
 		Animation* FindAnimation(const std::wstring& name);
 		void PlayAnimation(const std::wstring& name, bool loop = true);
+
+		[[nodiscard]] bool IsComplete() const { return mActiveAnimation->IsComplete(); }
 
 	private:
 		std::map<std::wstring, Animation*> mAnimations;

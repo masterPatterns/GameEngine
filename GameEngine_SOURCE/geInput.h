@@ -17,6 +17,7 @@ namespace ge
 		A, S, D, F, G, H, J, K, L,
 		Z, X, C, V, B, N, M,
 		Left, Right, Down, Up, Space,
+		LButton, MButton, RButton,
 		End,
 	};
 
@@ -36,6 +37,7 @@ namespace ge
 		static bool GetKeyDown(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Down; }
 		static bool GetKeyUp(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Up; }
 		static bool GetKey(eKeyCode code) { return Keys[(UINT)code].state == eKeyState::Pressed; }
+		static math::Vector2 GetMousePosition() { return mMousePosition; }
 
 	private:
 		static void createKeys();
@@ -44,10 +46,13 @@ namespace ge
 		static bool isKeyDown(eKeyCode code);
 		static void updateKeyDown(Key& key);
 		static void updateKeyUp(Key& key);
+		static void getMousePositionByWindow();
+		static void clearKeys();
 
 	private:
 		//eKeyState mState = eKeyState::Up;
 		static std::vector<Key> Keys;
+		static math::Vector2 mMousePosition;
 	};
 }
 

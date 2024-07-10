@@ -1,4 +1,6 @@
 #include "geAnimator.h"
+#include "geResources.h"
+#include "geTexture.h"
 
 namespace ge
 {
@@ -34,6 +36,7 @@ namespace ge
 		if (mActiveAnimation)
 			mActiveAnimation->Render(hdc);
 	}
+
 	void Animator::CreateAnimation(const std::wstring& name
 		, graphcis::Texture* spriteSheet
 		, Vector2 leftTop

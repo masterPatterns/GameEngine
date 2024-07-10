@@ -25,6 +25,8 @@ namespace ge
 		Animator* playerAnimator = mPlayer->AddComponent<Animator>();
 		playerAnimator->CreateAnimation(L"Idle", playerTexture
 			, Vector2(2000.0f, 250.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 1, 0.1f);
+		playerAnimator->CreateAnimation(L"FrontGiveWater", playerTexture
+			, Vector2(0.0f, 2000.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 12, 0.1f);
 		playerAnimator->PlayAnimation(L"Idle", false);
 
 		mPlayer->GetComponent<Transform>()->SetPos(Vector2(100.0f, 100.0f));

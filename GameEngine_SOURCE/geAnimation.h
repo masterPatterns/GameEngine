@@ -1,11 +1,6 @@
 #pragma once
 #include "geResource.h"
 #include "geTexture.h"
-#include "geTime.h"
-#include "geTransform.h"
-#include "geGameObject.h"
-#include "geAnimator.h"
-#include "geRenderer.h"
 
 namespace ge
 {
@@ -51,7 +46,7 @@ namespace ge
 		void SetAnimator(class Animator* animatior) { mAnimator = animatior; }
 
 	private:
-		class Animator* mAnimator;
+		Animator* mAnimator;
 		graphcis::Texture* mTexture;
 
 		std::vector<Sprite> mAnimationSheet;
