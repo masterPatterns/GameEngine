@@ -1,12 +1,14 @@
 #pragma once
 #include <Windows.h>
 #include <assert.h>
+#include <iostream>
 
 #include <vector>
 #include <algorithm>
 #include <string>
 #include <map>
 #include <time.h>
+#include <functional>
 
 #include "geMath.h"
 

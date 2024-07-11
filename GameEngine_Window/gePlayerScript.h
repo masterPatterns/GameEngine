@@ -39,5 +39,11 @@ namespace ge
 	private:
 		eState mState;
 		class Animator* mAnimator;
+
+		//void (*StartEvent)();
+		//void (*CompleteEvent)();
+		//void (*EndEvent)();
+
+
 	};
 }

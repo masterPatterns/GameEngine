@@ -7,6 +7,28 @@ namespace ge
 	class Animator : public Component
 	{
 	public:
+		struct Event
+		{
+			void operator=(std::function<void()> func)
+			{
+				mEvent = std::move(func);
+			}
+
+			void operator()()
+			{
+				if (mEvent)
+					mEvent;
+			}
+			std::function<void()> mEvent;
+		};
+
+		struct Events
+		{
+			Event mStartEvent;
+			Event mCompleteEvent;
+			Event mEndEvent;
+		};
+
 		Animator();
 		virtual ~Animator();
 
@@ -32,5 +54,7 @@ namespace ge
 		std::map<std::wstring, Animation*> mAnimations;
 		Animation* mActiveAnimation;
 		bool mbLoop;
+
+		std::map<std::wstring, Events*> mEvents;
 	};
 }
