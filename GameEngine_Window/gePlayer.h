@@ -15,5 +15,7 @@ namespace ge
 		void Render(HDC hdc) override;
 
 		void PositionMove(int posiAndDire, float mSpeed);
+
+		void AttackEffect();
 	};
 }

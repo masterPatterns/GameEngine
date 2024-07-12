@@ -54,6 +54,9 @@ namespace ge
 
 		tr->SetPos(pos);
 	}
+	void Player::AttackEffect()
+	{
+	}
 	void Player::LateUpdate()
 	{
 		GameObject::LateUpdate();

@@ -19,7 +19,7 @@ namespace ge
 		//camera->AddComponent<CameraScript>();
 
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
-		mPlayer->AddComponent<PlayerScript>();
+		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
 
 		graphcis::Texture* playerTexture = Resources::Find<graphcis::Texture>(L"Player");
 		Animator* playerAnimator = mPlayer->AddComponent<Animator>();
@@ -28,6 +28,8 @@ namespace ge
 		playerAnimator->CreateAnimation(L"FrontGiveWater", playerTexture
 			, Vector2(0.0f, 2000.0f), Vector2(250.0f, 250.0f), Vector2::Zero, 12, 0.1f);
 		playerAnimator->PlayAnimation(L"Idle", false);
+
+		playerAnimator->GetCompleteEvent(L"FrontGiveWater") = std::bind(&PlayerScript::AttackEffect, plScript);
 
 		mPlayer->GetComponent<Transform>()->SetPos(Vector2(100.0f, 100.0f));
 		//mPlayer->GetComponent<Transform>()->SetScale(Vector2(3.0f, 3.0f));

@@ -31,6 +31,8 @@ namespace ge
 
 		void PositionMove(int posiAndDire, float mSpeed);
 
+		void AttackEffect();
+
 	private:
 		void idle();
 		void move();
