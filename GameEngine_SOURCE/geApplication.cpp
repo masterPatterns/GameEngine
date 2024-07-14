@@ -14,7 +14,7 @@ namespace ge
 	}
 	Application::~Application() 
 	{
-	
+		
 	}
 
 	void Application::Initialize(HWND hwnd, UINT width, UINT height, int nCmdShow)
@@ -71,6 +71,12 @@ namespace ge
 		Time::Render(mBackHdc);
 
 		copyRenderTarget(mBackHdc, mHdc);
+	}
+
+	void Application::Release()
+	{
+		SceneManager::Release();
+		Resources::Release();
 	}
 
 	void Application::clearRenderTarget()

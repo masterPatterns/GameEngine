@@ -13,6 +13,17 @@ namespace ge
 	}
 	Animator::~Animator()
 	{
+		for (auto& iter : mAnimations)
+		{
+			delete iter.second;
+			iter.second = nullptr;
+		}
+
+		for (auto& iter : mEvents)
+		{
+			delete iter.second;
+			iter.second = nullptr;
+		}
 	}
 	void Animator::Initialize()
 	{

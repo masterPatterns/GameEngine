@@ -5,6 +5,7 @@
 #include "geInput.h"
 #include "geTime.h"
 #include "geSceneManager.h"
+#include "geResources.h"
 
 namespace ge
 {
@@ -20,6 +21,7 @@ namespace ge
 		void Update();
 		void LateUpdate();
 		void Render();
+		void Release();
 
 		HWND GetHwnd() { return mHwnd; }
 		HDC GetHdc() { return mHdc; }

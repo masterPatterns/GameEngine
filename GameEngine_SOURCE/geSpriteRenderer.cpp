@@ -16,6 +16,7 @@ namespace ge
 	}
 	SpriteRenderer::~SpriteRenderer()
 	{
+		
 	}
 	void SpriteRenderer::Initialize()
 	{

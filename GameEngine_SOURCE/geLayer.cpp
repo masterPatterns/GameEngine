@@ -10,7 +10,14 @@ namespace ge
 	}
 	Layer::~Layer()
 	{
+		for (GameObject* gameObj : mGemeObjects)
+		{
+			if (gameObj == nullptr)
+				continue;
 
+			delete gameObj;
+			gameObj = nullptr;
+		}
 	}
 
 	void Layer::Initialize()

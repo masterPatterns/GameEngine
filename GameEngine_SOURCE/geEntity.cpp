@@ -9,5 +9,6 @@ namespace ge
 	}
 	Entity::~Entity()
 	{
+		
 	}
 }
