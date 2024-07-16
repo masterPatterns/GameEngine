@@ -21,6 +21,8 @@ namespace ge
 		mPlayer = object::Instantiate<Player>(enums::eLayerType::Player);
 		PlayerScript* plScript = mPlayer->AddComponent<PlayerScript>();
 
+		
+
 		graphcis::Texture* playerTexture = Resources::Find<graphcis::Texture>(L"Player");
 		Animator* playerAnimator = mPlayer->AddComponent<Animator>();
 		playerAnimator->CreateAnimation(L"Idle", playerTexture
@@ -47,6 +49,7 @@ namespace ge
 		// Cat
 		Cat* cat = object::Instantiate<Cat>(enums::eLayerType::Animal);
 		cat->AddComponent<CatScript>();
+		cameraComp->SetTarget(cat);
 
 		graphcis::Texture* catTex = Resources::Find<graphcis::Texture>(L"Cat");
 		Animator* catAnimator = cat->AddComponent<Animator>();
