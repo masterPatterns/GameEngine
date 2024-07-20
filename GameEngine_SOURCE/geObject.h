@@ -43,4 +43,9 @@ namespace ge::object
 		return gameObject;
 	}
 
+	static void Destory(GameObject* obj)
+	{
+		obj->Death();
+	}
+
 }
