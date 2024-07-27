@@ -31,6 +31,7 @@ namespace ge
 		Update();
 		LateUpdate();
 		Render();
+		Destroy();
 	}
 
 	void Application::Update()
@@ -71,6 +72,11 @@ namespace ge
 		Time::Render(mBackHdc);
 
 		copyRenderTarget(mBackHdc, mHdc);
+	}
+
+	void Application::Destroy()
+	{
+		SceneManager::Destroy();
 	}
 
 	void Application::Release()

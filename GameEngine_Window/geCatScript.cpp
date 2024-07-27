@@ -1,4 +1,5 @@
 #include "geCatScript.h"
+#include "geObject.h"
 
 namespace ge
 {
@@ -6,6 +7,7 @@ namespace ge
 		: mState(CatScript::eState::SitDown)
 		, mAnimator(nullptr)
 		, mTime(0.0f)
+		, mDeathTime(0.0f)
 	{
 	}
 	CatScript::~CatScript()
@@ -17,6 +19,12 @@ namespace ge
 	}
 	void CatScript::Update()
 	{
+		mDeathTime += Time::DeltaTime();
+		if (mDeathTime > 6.0f)
+		{
+			object::Destory(GetOwner());
+		}
+
 		if (mAnimator == nullptr)
 		{
 			mAnimator = GetOwner()->GetComponent<Animator>();

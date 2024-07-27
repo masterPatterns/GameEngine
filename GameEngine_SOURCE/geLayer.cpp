@@ -64,6 +64,29 @@ namespace ge
 		}
 	}
 
+	void Layer::Destroy()
+	{
+		for (GemeObjectIter iter = mGemeObjects.begin()
+			; iter != mGemeObjects.end()
+			; )
+		{
+			GameObject::eState active = (*iter)->GetActive();
+			if (active == GameObject::eState::Dead)
+			{
+				GameObject* deathObj = (*iter);
+
+				iter = mGemeObjects.erase(iter);
+
+				delete deathObj;
+				deathObj = nullptr;
+
+				continue;
+			}
+
+			iter++;
+		}
+	}
+
 	void Layer::AddGameObject(GameObject* gameObjedt)
 	{
 		if (gameObjedt == nullptr)
